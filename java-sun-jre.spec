@@ -14,7 +14,7 @@ URL:		http://java.sun.com/linux/
 BuildRequires:	rpm-build >= 4.3-0.20030610.21
 BuildRequires:	unzip
 Requires:	XFree86-libs
-Requires:	java-shared
+Requires:	java-jre-tools
 Provides:	java1.4
 Provides:	jre = %{version}
 Provides:	java
