@@ -1,13 +1,13 @@
 Summary:	Sun JRE (Java Runtime Environment) for Linux
 Summary(pl):	Sun JRE - ¶rodowisko uruchomieniowe Javy dla Linuksa
 Name:		java-sun-jre
-Version:	1.4.2_05
+Version:	1.4.2_06
 Release:	0.2
 License:	restricted, non-distributable
 Group:		Development/Languages/Java
 # download through forms from http://java.sun.com/j2se/1.4.2/download.html
-Source0:	j2re-1_4_2_05-linux-i586.bin
-# NoSource0-md5: cc27ac6189062214c072cb5b4ae068fa
+Source0:	j2re-1_4_2_06-linux-i586.bin
+# NoSource0-md5: e58cf7f1001899cdd73056e140900300
 NoSource:	0
 Patch0:		%{name}-ControlPanel-fix.patch
 URL:		http://java.sun.com/linux/
