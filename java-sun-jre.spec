@@ -13,7 +13,7 @@ Patch0:		%{name}-ControlPanel-fix.patch
 URL:		http://java.sun.com/linux/
 BuildRequires:	rpm-build >= 4.3-0.20030610.21
 BuildRequires:	unzip
-Requires:	X11-libs
+Requires:	XFree86-libs
 Requires:	java-shared
 Provides:	java1.4
 Provides:	jre = %{version}
