@@ -2,7 +2,7 @@ Summary:	Sun JRE (Java Runtime Environment) for Linux
 Summary(pl):	Sun JRE - ¶rodowisko uruchomieniowe Javy dla Linuksa
 Name:		java-sun-jre
 Version:	1.4.2_05
-Release:	0.1
+Release:	0.2
 License:	restricted, non-distributable
 Group:		Development/Languages/Java
 # download through forms from http://java.sun.com/j2se/1.4.2/download.html
@@ -13,7 +13,7 @@ Patch0:		%{name}-ControlPanel-fix.patch
 URL:		http://java.sun.com/linux/
 BuildRequires:	rpm-build >= 4.3-0.20030610.21
 BuildRequires:	unzip
-Requires:	XFree86-libs
+Requires:	X11-libs
 Requires:	java-shared
 Provides:	java1.4
 Provides:	jre = %{version}
@@ -43,6 +43,7 @@ Obsoletes:	jdbc-stdext
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		javasun		java-sun
 %define		javadir		%{_libdir}/java
 %define		jredir		%{_libdir}/java/jre
 %define		_javalibdir	%{_datadir}/java
@@ -66,8 +67,7 @@ Java Runtime Environment for Linux.
 %package jdbc
 Summary:	JDBC files for Sun Java
 Summary(pl):	Pliki JDBC dla Javy Suna
-Group:		Development/Libraries/Java
-######		Unknown group!
+Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libodbc.so.1
 Requires:	libodbcinst.so.1
@@ -82,7 +82,7 @@ Ten pakiet zawiera pliki JDBC dla Javy Suna.
 Summary:	JRE module for ALSA sound support
 Summary(pl):	Modu³ JRE do obs³ugi d¼wiêku poprzez ALSA
 Group:		Development/Languages/Java
-Requires:	%{name}-jre = %{version}
+Requires:	%{name} = %{version}
 
 %description alsa
 JRE module for ALSA sound support.
@@ -95,21 +95,18 @@ Summary:	Shared Java tools
 Summary(pl):	Wspó³dzielone narzêdzia Javy
 Group:		Development/Languages/Java
 Requires:	%{name} = %{version}
-Provides:	jar
 Provides:	java-shared
 Obsoletes:	java-shared
-Obsoletes:	jar
-Obsoletes:	fastjar
 
 %description tools
 This package contains tools that are common for every Java(TM)
-implementation, such as rmic or jar.
+implementation, such as rmic.
 
 %description tools -l pl
 Pakiet ten zawiera narzêdzia wspólne dla ka¿dej implementacji
-Javy(TM), takie jak rmic czy jar.
+Javy(TM), takie jak rmic.
 
-%package -n netscape4-plugin-%{name}
+%package -n netscape4-plugin-%{javasun}
 Summary:	Netscape 4.x Java plugin
 Summary(pl):	Wtyczka Javy do Netscape 4.x
 Group:		Development/Languages/Java
@@ -120,13 +117,13 @@ Obsoletes:	netscape4-plugin-java-blackdown
 Obsoletes:	java-sun-nn4-plugin
 Obsoletes:	jre-netscape4-plugin
 
-%description -n netscape4-plugin-%{name}
+%description -n netscape4-plugin-%{javasun}
 Java plugin for Netscape 4.x.
 
-%description -n netscape4-plugin-%{name} -l pl
+%description -n netscape4-plugin-%{javasun} -l pl
 Wtyczka z obs³ug± Javy dla Netscape 4.x.
 
-%package -n mozilla-plugin-gcc2-%{name}
+%package -n mozilla-plugin-gcc2-%{javasun}
 Summary:	Mozilla Java plugin
 Summary(pl):	Wtyczka Javy do Mozilli
 Group:		Development/Languages/Java
@@ -140,13 +137,13 @@ Obsoletes:	mozilla-plugin-java-blackdown
 Obsoletes:	mozilla-plugin-java-sun
 Obsoletes:	mozilla-plugin-gcc32-%{name}
 
-%description -n mozilla-plugin-gcc2-%{name}
+%description -n mozilla-plugin-gcc2-%{javasun}
 Java plugin for Mozilla compiled using gcc 2.9x.
 
-%description -n mozilla-plugin-gcc2-%{name} -l pl
+%description -n mozilla-plugin-gcc2-%{javasun} -l pl
 Wtyczka z obs³ug± Javy dla Mozilli skompilowana przy u¿yciu gcc 2.9x.
 
-%package -n mozilla-plugin-gcc32-%{name}
+%package -n mozilla-plugin-gcc32-%{javasun}
 Summary:	Mozilla Java plugin
 Summary(pl):	Wtyczka Javy do Mozilli
 Group:		Development/Languages/Java
@@ -158,12 +155,12 @@ Obsoletes:	jre-mozilla-plugin
 Obsoletes:	mozilla-plugin-blackdown-java-sdk
 Obsoletes:	mozilla-plugin-java-blackdown
 Obsoletes:	mozilla-plugin-java-sun
-Obsoletes:	mozilla-plugin-gcc2-%{name}
+Obsoletes:	mozilla-plugin-gcc2-%{javasun}
 
-%description -n mozilla-plugin-gcc32-%{name}
+%description -n mozilla-plugin-gcc32-%{javasun}
 Java plugin for Mozilla compiled using gcc 3.2.
 
-%description -n mozilla-plugin-gcc32-%{name} -l pl
+%description -n mozilla-plugin-gcc32-%{javasun} -l pl
 Wtyczka z obs³ug± Javy dla Mozilli skompilowana przy u¿yciu gcc 3.2.
 
 %prep
@@ -378,7 +375,7 @@ fi
 %{_mandir}/man1/rmiregistry.1*
 %lang(ja) %{_mandir}/ja/man1/rmiregistry.1*
 
-%files -n netscape4-plugin-%{name}
+%files -n netscape4-plugin-%{javasun}
 %defattr(644,root,root,755)
 %attr(755,root,root) %{netscape4dir}/plugins/libjavaplugin.so
 %{netscape4dir}/java/classes/*
@@ -396,13 +393,13 @@ fi
 %lang(zh_TW) %{jredir}/lib/locale/zh_TW
 %lang(zh_TW) %{jredir}/lib/locale/zh_TW.BIG5
 
-%files -n mozilla-plugin-gcc2-%{name}
+%files -n mozilla-plugin-gcc2-%{javasun}
 %defattr(644,root,root,755)
 %dir %{jredir}/plugin/i386/ns610
 %attr(755,root,root) %{jredir}/plugin/i386/ns610/libjavaplugin_oji.so
 %{mozilladir}/plugins/libjavaplugin_oji.so
 
-%files -n mozilla-plugin-gcc32-%{name}
+%files -n mozilla-plugin-gcc32-%{javasun}
 %defattr(644,root,root,755)
 %dir %{jredir}/plugin/i386/ns610-gcc32
 %attr(755,root,root) %{jredir}/plugin/i386/ns610-gcc32/libjavaplugin_oji.so
