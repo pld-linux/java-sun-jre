@@ -95,6 +95,7 @@ Summary:	Shared Java tools
 Summary(pl):	Wspó³dzielone narzêdzia Javy
 Group:		Development/Languages/Java
 Requires:	%{name} = %{version}
+Provides:	java-jre-tools
 
 %description tools
 This package contains tools that are common for every Java(TM)
