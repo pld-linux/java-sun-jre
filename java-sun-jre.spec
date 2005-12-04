@@ -126,7 +126,7 @@ Wtyczka z obs³ug± Javy dla Netscape 4.x.
 Summary:	Mozilla Java plugin
 Summary(pl):	Wtyczka Javy do Mozilli
 Group:		Development/Languages/Java
-PreReq:		mozilla-embedded
+Requires:	mozilla-embedded
 Requires:	jre = %{version}
 Obsoletes:	blackdown-java-sdk-mozilla-plugin
 Obsoletes:	java-sun-moz-plugin
@@ -146,7 +146,7 @@ Wtyczka z obs³ug± Javy dla Mozilli skompilowana przy u¿yciu gcc 2.9x.
 Summary:	Mozilla Java plugin
 Summary(pl):	Wtyczka Javy do Mozilli
 Group:		Development/Languages/Java
-PreReq:		mozilla-embedded
+Requires:	mozilla-embedded
 Requires:	jre = %{version}
 Obsoletes:	blackdown-java-sdk-mozilla-plugin
 Obsoletes:	java-sun-moz-plugin
@@ -240,7 +240,7 @@ ln -sf %{jredir}/lib/rt.jar $RPM_BUILD_ROOT%{_javalibdir}/jaas.jar
 ln -sf %{jredir}/lib/rt.jar $RPM_BUILD_ROOT%{_javalibdir}/jdbc-stdext.jar
 ln -sf %{jredir}/lib/rt.jar $RPM_BUILD_ROOT%{_javalibdir}/jdbc-stdext-3.0.jar
 
-install -d -m 755 $RPM_BUILD_ROOT%{jredir}/javaws
+install -d $RPM_BUILD_ROOT%{jredir}/javaws
 cp -a javaws/* $RPM_BUILD_ROOT%{jredir}/javaws
 perl -p -i -e 's#javaws\.cfg\.jre\.0\.path=.*#javaws\.cfg\.jre\.0\.path=%{jredir}/bin/java#' $RPM_BUILD_ROOT%{jredir}/javaws/javaws.cfg
 ln -sf %{jredir}/javaws/javaws.jar $RPM_BUILD_ROOT%{_javalibdir}/javaws.jar
@@ -307,7 +307,7 @@ fi
 %{jredir}/lib/images
 %dir %{jredir}/lib/security
 %{jredir}/lib/security/*.*
-%verify(not md5 size mtime) %config(noreplace) %{jredir}/lib/security/cacerts
+%verify(not md5 mtime size) %config(noreplace) %{jredir}/lib/security/cacerts
 %{jredir}/lib/zi
 %{jredir}/lib/*.jar
 %{jredir}/lib/*.properties
@@ -396,10 +396,10 @@ fi
 %defattr(644,root,root,755)
 %dir %{jredir}/plugin/i386/ns610
 %attr(755,root,root) %{jredir}/plugin/i386/ns610/libjavaplugin_oji.so
-%{mozilladir}/plugins/libjavaplugin_oji.so
+%attr(755,root,root) %{mozilladir}/plugins/libjavaplugin_oji.so
 
 %files -n mozilla-plugin-gcc32-%{javasun}
 %defattr(644,root,root,755)
 %dir %{jredir}/plugin/i386/ns610-gcc32
 %attr(755,root,root) %{jredir}/plugin/i386/ns610-gcc32/libjavaplugin_oji.so
-%{mozilladir}/plugins/libjavaplugin_oji-gcc32.so
+%attr(755,root,root) %{mozilladir}/plugins/libjavaplugin_oji-gcc32.so
