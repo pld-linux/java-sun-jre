@@ -17,6 +17,7 @@ Requires:	XFree86-libs
 Requires:	java-jre-tools
 Provides:	java1.4
 Provides:	jre = %{version}
+Provides:	j2re = %{version}
 Provides:	java
 Provides:	javaws = %{version}
 Provides:	jndi = %{version}
