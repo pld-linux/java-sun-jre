@@ -7,7 +7,7 @@ License:	restricted, non-distributable
 Group:		Development/Languages/Java
 # download through forms from http://java.sun.com/j2se/1.4.2/download.html
 Source0:	j2re-1_4_2_12-linux-i586.bin
-# NoSource0-md5: 0a0cfe6f442749ab71ec065e333e3c1f
+# NoSource0-md5: 1df6655d341c736d8e3845d920612420
 NoSource:	0
 Patch0:		%{name}-ControlPanel-fix.patch
 URL:		http://java.sun.com/linux/
