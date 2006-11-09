@@ -83,7 +83,7 @@ Ten pakiet zawiera pliki JDBC dla Javy Suna.
 Summary:	JRE module for ALSA sound support
 Summary(pl):	Modu³ JRE do obs³ugi d¼wiêku poprzez ALSA
 Group:		Development/Languages/Java
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description alsa
 JRE module for ALSA sound support.
@@ -95,7 +95,7 @@ Modu³ JRE do obs³ugi d¼wiêku poprzez ALSA.
 Summary:	Shared Java tools
 Summary(pl):	Wspó³dzielone narzêdzia Javy
 Group:		Development/Languages/Java
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Provides:	java-jre-tools
 
 %description tools
@@ -110,7 +110,7 @@ Javy(TM), takie jak rmic.
 Summary:	Netscape 4.x Java plugin
 Summary(pl):	Wtyczka Javy do Netscape 4.x
 Group:		Development/Languages/Java
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	netscape-common >= 4.0
 Obsoletes:	blackdown-java-sdk-netscape4-plugin
 Obsoletes:	netscape4-plugin-java-blackdown
