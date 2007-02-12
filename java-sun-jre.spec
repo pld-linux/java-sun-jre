@@ -1,5 +1,5 @@
 Summary:	Sun JRE (Java Runtime Environment) for Linux
-Summary(pl):	Sun JRE - ∂rodowisko uruchomieniowe Javy dla Linuksa
+Summary(pl.UTF-8):   Sun JRE - ≈õrodowisko uruchomieniowe Javy dla Linuksa
 Name:		java-sun-jre
 Version:	1.4.2_12
 Release:	0.1
@@ -62,12 +62,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Java Runtime Environment for Linux.
 
-%description -l pl
-¶rodowisko uruchomieniowe Javy dla Linuksa.
+%description -l pl.UTF-8
+≈örodowisko uruchomieniowe Javy dla Linuksa.
 
 %package jdbc
 Summary:	JDBC files for Sun Java
-Summary(pl):	Pliki JDBC dla Javy Suna
+Summary(pl.UTF-8):   Pliki JDBC dla Javy Suna
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libodbc.so.1
@@ -76,24 +76,24 @@ Requires:	libodbcinst.so.1
 %description jdbc
 This package contains JDBC files for Sun Java.
 
-%description jdbc -l pl
+%description jdbc -l pl.UTF-8
 Ten pakiet zawiera pliki JDBC dla Javy Suna.
 
 %package alsa
 Summary:	JRE module for ALSA sound support
-Summary(pl):	Modu≥ JRE do obs≥ugi dºwiÍku poprzez ALSA
+Summary(pl.UTF-8):   Modu≈Ç JRE do obs≈Çugi d≈∫wiƒôku poprzez ALSA
 Group:		Development/Languages/Java
 Requires:	%{name} = %{version}-%{release}
 
 %description alsa
 JRE module for ALSA sound support.
 
-%description alsa -l pl
-Modu≥ JRE do obs≥ugi dºwiÍku poprzez ALSA.
+%description alsa -l pl.UTF-8
+Modu≈Ç JRE do obs≈Çugi d≈∫wiƒôku poprzez ALSA.
 
 %package tools
 Summary:	Shared Java tools
-Summary(pl):	WspÛ≥dzielone narzÍdzia Javy
+Summary(pl.UTF-8):   Wsp√≥≈Çdzielone narzƒôdzia Javy
 Group:		Development/Languages/Java
 Requires:	%{name} = %{version}-%{release}
 Provides:	java-jre-tools
@@ -102,13 +102,13 @@ Provides:	java-jre-tools
 This package contains tools that are common for every Java(TM)
 implementation, such as rmic.
 
-%description tools -l pl
-Pakiet ten zawiera narzÍdzia wspÛlne dla kaødej implementacji
+%description tools -l pl.UTF-8
+Pakiet ten zawiera narzƒôdzia wsp√≥lne dla ka≈ºdej implementacji
 Javy(TM), takie jak rmic.
 
 %package -n netscape4-plugin-%{javasun}
 Summary:	Netscape 4.x Java plugin
-Summary(pl):	Wtyczka Javy do Netscape 4.x
+Summary(pl.UTF-8):   Wtyczka Javy do Netscape 4.x
 Group:		Development/Languages/Java
 Requires:	%{name} = %{version}-%{release}
 Requires:	netscape-common >= 4.0
@@ -120,12 +120,12 @@ Obsoletes:	jre-netscape4-plugin
 %description -n netscape4-plugin-%{javasun}
 Java plugin for Netscape 4.x.
 
-%description -n netscape4-plugin-%{javasun} -l pl
-Wtyczka z obs≥ug± Javy dla Netscape 4.x.
+%description -n netscape4-plugin-%{javasun} -l pl.UTF-8
+Wtyczka z obs≈ÇugƒÖ Javy dla Netscape 4.x.
 
 %package -n mozilla-plugin-gcc2-%{javasun}
 Summary:	Mozilla Java plugin
-Summary(pl):	Wtyczka Javy do Mozilli
+Summary(pl.UTF-8):   Wtyczka Javy do Mozilli
 Group:		Development/Languages/Java
 Requires:	mozilla-embedded
 Requires:	jre = %{version}
@@ -140,12 +140,12 @@ Obsoletes:	mozilla-plugin-gcc32-%{name}
 %description -n mozilla-plugin-gcc2-%{javasun}
 Java plugin for Mozilla compiled using gcc 2.9x.
 
-%description -n mozilla-plugin-gcc2-%{javasun} -l pl
-Wtyczka z obs≥ug± Javy dla Mozilli skompilowana przy uøyciu gcc 2.9x.
+%description -n mozilla-plugin-gcc2-%{javasun} -l pl.UTF-8
+Wtyczka z obs≈ÇugƒÖ Javy dla Mozilli skompilowana przy u≈ºyciu gcc 2.9x.
 
 %package -n mozilla-plugin-gcc32-%{javasun}
 Summary:	Mozilla Java plugin
-Summary(pl):	Wtyczka Javy do Mozilli
+Summary(pl.UTF-8):   Wtyczka Javy do Mozilli
 Group:		Development/Languages/Java
 Requires:	mozilla-embedded
 Requires:	jre = %{version}
@@ -160,8 +160,8 @@ Obsoletes:	mozilla-plugin-gcc2-%{javasun}
 %description -n mozilla-plugin-gcc32-%{javasun}
 Java plugin for Mozilla compiled using gcc 3.2.
 
-%description -n mozilla-plugin-gcc32-%{javasun} -l pl
-Wtyczka z obs≥ug± Javy dla Mozilli skompilowana przy uøyciu gcc 3.2.
+%description -n mozilla-plugin-gcc32-%{javasun} -l pl.UTF-8
+Wtyczka z obs≈ÇugƒÖ Javy dla Mozilli skompilowana przy u≈ºyciu gcc 3.2.
 
 %prep
 %setup -q -T -c -n j2re%{version}
