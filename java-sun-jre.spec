@@ -1,5 +1,5 @@
 Summary:	Sun JRE (Java Runtime Environment) for Linux
-Summary(pl.UTF-8):   Sun JRE - środowisko uruchomieniowe Javy dla Linuksa
+Summary(pl.UTF-8):	Sun JRE - środowisko uruchomieniowe Javy dla Linuksa
 Name:		java-sun-jre
 Version:	1.4.2_12
 Release:	0.1
@@ -67,7 +67,7 @@ Java Runtime Environment for Linux.
 
 %package jdbc
 Summary:	JDBC files for Sun Java
-Summary(pl.UTF-8):   Pliki JDBC dla Javy Suna
+Summary(pl.UTF-8):	Pliki JDBC dla Javy Suna
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libodbc.so.1
@@ -81,7 +81,7 @@ Ten pakiet zawiera pliki JDBC dla Javy Suna.
 
 %package alsa
 Summary:	JRE module for ALSA sound support
-Summary(pl.UTF-8):   Moduł JRE do obsługi dźwięku poprzez ALSA
+Summary(pl.UTF-8):	Moduł JRE do obsługi dźwięku poprzez ALSA
 Group:		Development/Languages/Java
 Requires:	%{name} = %{version}-%{release}
 
@@ -93,7 +93,7 @@ Moduł JRE do obsługi dźwięku poprzez ALSA.
 
 %package tools
 Summary:	Shared Java tools
-Summary(pl.UTF-8):   Współdzielone narzędzia Javy
+Summary(pl.UTF-8):	Współdzielone narzędzia Javy
 Group:		Development/Languages/Java
 Requires:	%{name} = %{version}-%{release}
 Provides:	java-jre-tools
@@ -108,7 +108,7 @@ Javy(TM), takie jak rmic.
 
 %package -n netscape4-plugin-%{javasun}
 Summary:	Netscape 4.x Java plugin
-Summary(pl.UTF-8):   Wtyczka Javy do Netscape 4.x
+Summary(pl.UTF-8):	Wtyczka Javy do Netscape 4.x
 Group:		Development/Languages/Java
 Requires:	%{name} = %{version}-%{release}
 Requires:	netscape-common >= 4.0
@@ -125,7 +125,7 @@ Wtyczka z obsługą Javy dla Netscape 4.x.
 
 %package -n mozilla-plugin-gcc2-%{javasun}
 Summary:	Mozilla Java plugin
-Summary(pl.UTF-8):   Wtyczka Javy do Mozilli
+Summary(pl.UTF-8):	Wtyczka Javy do Mozilli
 Group:		Development/Languages/Java
 Requires:	mozilla-embedded
 Requires:	jre = %{version}
@@ -145,7 +145,7 @@ Wtyczka z obsługą Javy dla Mozilli skompilowana przy użyciu gcc 2.9x.
 
 %package -n mozilla-plugin-gcc32-%{javasun}
 Summary:	Mozilla Java plugin
-Summary(pl.UTF-8):   Wtyczka Javy do Mozilli
+Summary(pl.UTF-8):	Wtyczka Javy do Mozilli
 Group:		Development/Languages/Java
 Requires:	mozilla-embedded
 Requires:	jre = %{version}
