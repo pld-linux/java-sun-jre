@@ -1,0 +1,2 @@
+- jre provides jre = %{version}
+- Release 0.5
