@@ -1,0 +1,4 @@
+- better Mozilla plugins:
+- - named mozilla-plugin-*
+- - obsolete old name
+- - Prereq mozilla-embedded
