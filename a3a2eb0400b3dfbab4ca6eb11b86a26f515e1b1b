@@ -1,0 +1,2 @@
+- _noautoreqdep to prevent wrong requires when building with another JRE
+- mozilla plugin Requires: mozilla-embeded, not whole mozilla
