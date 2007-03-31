@@ -190,7 +190,7 @@ mv lib/font.properties{.Redhat6.1,}
 
 cp -rf {bin,lib} $RPM_BUILD_ROOT%{jredir}
 
-# conflict with heimdal
+# conflict with heimdal/krb5
 for i in kinit klist ; do
 	ln -sf %{jredir}/bin/$i $RPM_BUILD_ROOT%{_bindir}/j$i
 	mv -f $RPM_BUILD_ROOT%{_mandir}/man1/${i}.1 $RPM_BUILD_ROOT%{_mandir}/man1/j${i}.1
